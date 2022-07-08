@@ -1,0 +1,18 @@
+{
+  "name": "aws-lambda-typescript",
+  "version": "1.0.0",
+  "main": "src/main.ts",
+  "scripts": {
+    "dev": "nodemon --config nodemon.json",
+    "deploy": "serverless deploy --verbose",
+    "local": "serverless invoke local -f sample",
+    "check": "serverless invoke -f sample",
+    "remove": "serverless remove"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.19",
+    "serverless-offline": "^9.0.0",
+    "serverless-plugin-typescript": "^2.1.2",
+    "typescript": "^4.7.4"
+  }
+}
