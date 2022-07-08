@@ -13,6 +13,9 @@ export const main = async (event: any) => {
 
   const data: IHttpResponse = {
     statusCode: 200,
+    headers: {
+      'content-type': 'application/json',
+    },
     body: JSONtoString(JSONResponse),
   }
 

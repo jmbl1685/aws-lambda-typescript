@@ -117,7 +117,22 @@ npm run check prod
   ```json
   {
     "statusCode": 200,
+    "headers": {
+        "content-type": "application/json"
+    },
     "body": "{\"message\":\"Hello World!\"}"
   }
   ```
+  
+  Screenshots
+
+![image](https://user-images.githubusercontent.com/22874642/182498554-5efbdbc7-f710-40d9-b8f9-4b05d1078207.png)
+
+![image](https://user-images.githubusercontent.com/22874642/182498213-3fb315ee-89be-4eed-bd36-6295d3a2ad53.png)
+
+![image](https://user-images.githubusercontent.com/22874642/182498251-9c661864-7be0-4cda-ae3e-8f9ff76ef045.png)
+
+![image](https://user-images.githubusercontent.com/22874642/182498680-3bc79916-8d05-41a7-b5e4-5ddbadc2795c.png)
+
+
 
