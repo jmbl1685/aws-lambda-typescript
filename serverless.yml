@@ -1,20 +1,35 @@
 service: aws-lambda-typescript
 frameworkVersion: "3"
 
+custom:
+  # Every 1 min on weekdays
+  globalSchedule: cron(0/1 * ? * MON-FRI *)
+
 provider:
   name: aws
   runtime: nodejs16.x
   stage: dev
+  memorySize: 520
+  timeout: 10
   region: us-east-1
   deploymentMethod: direct
+  environment:
+    NODE_ENV: ${sls:stage}
+    CRON_TEST_VALUE: ${file(./config/env-${sls:stage}.json):CRON_TEST_VALUE}
 
 functions:
-  sample:
-    handler: ./src/main.sample
+  httpSample:
+    handler: ./src/main.httpSample
     events:
       - httpApi:
           path: /
           method: get
+
+  cronSample:
+    handler: ./src/main.cronSample
+    events:
+      - schedule: ${self:custom.globalSchedule}
+
 plugins:
   - serverless-plugin-typescript
   - serverless-offline

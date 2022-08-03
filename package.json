@@ -4,10 +4,10 @@
   "main": "src/main.ts",
   "scripts": {
     "dev": "nodemon --config nodemon.json",
-    "deploy": "serverless deploy --verbose",
+    "deploy": "serverless deploy --verbose --stage prod",
     "remove": "serverless remove",
-    "check-dev": "serverless invoke local -f sample",
-    "check-prod": "serverless invoke -f sample"
+    "check-dev": "serverless invoke local -f httpSample",
+    "check-prod": "serverless invoke -f httpSample"
   },
   "devDependencies": {
     "nodemon": "^2.0.19",

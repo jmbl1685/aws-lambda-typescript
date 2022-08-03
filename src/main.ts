@@ -7,7 +7,7 @@ import {
   IHttpResponse
 } from './interfaces';
 
-export const main = async (event: any) => {
+export const httpSample = async (event: any) => {
 
   const JSONResponse = DEFAULT_RESPONSE(event);
 
@@ -23,5 +23,9 @@ export const main = async (event: any) => {
 
 };
 
-export const sample = main;
-
+export const cronSample = (event: any) => {
+  // your code here...
+  const CRON_TEST_VALUE = process.env.CRON_TEST_VALUE;
+  console.log('CRON_TEST_VALUE', CRON_TEST_VALUE);
+  return 'success';
+}

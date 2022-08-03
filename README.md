@@ -2,6 +2,8 @@
 
 AWS lambda with Typescript + Serverless Framework
 
+Include: Basic HTTP Sample (GET), Basic CRON SCHEDULE/JOB
+
   - To run local
   
 ```
