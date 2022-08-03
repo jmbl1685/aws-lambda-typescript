@@ -1,6 +1,6 @@
 # aws-lambda-typescript
 
-AWS lambda wiht Typescript + Serverless Framework
+AWS lambda with Typescript + Serverless Framework
 
   - To run local
   
