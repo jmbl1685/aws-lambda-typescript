@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "nodemon --config nodemon.json",
     "deploy": "serverless deploy --verbose --stage prod",
-    "remove": "serverless remove",
+    "remove": "serverless remove --verbose --stage prod",
     "check-dev": "serverless invoke local -f httpSample",
     "check-prod": "serverless invoke -f httpSample"
   },
