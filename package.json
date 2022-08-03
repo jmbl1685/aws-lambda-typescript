@@ -5,9 +5,9 @@
   "scripts": {
     "dev": "nodemon --config nodemon.json",
     "deploy": "serverless deploy --verbose",
-    "local": "serverless invoke local -f sample",
-    "check": "serverless invoke -f sample",
-    "remove": "serverless remove"
+    "remove": "serverless remove",
+    "check-dev": "serverless invoke local -f sample",
+    "check-prod": "serverless invoke -f sample"
   },
   "devDependencies": {
     "nodemon": "^2.0.19",
